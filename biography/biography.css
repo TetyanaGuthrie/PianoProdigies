@@ -1,0 +1,70 @@
+@import url('../style.css');
+
+body {
+    background-color: var(--primary);
+    padding: 2rem 3rem;
+}
+
+#biography {
+    border-bottom: solid 1px var(--primary-font);
+    height: fit-content;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+    margin: 4rem auto;
+    background-color: var(--secondary);
+    padding: 2rem;
+    width: 100%;
+    border: solid 1rem var(--quaternary);
+    position: relative;
+}
+
+p::before {
+    border: solid 1rem var(--primary);
+    position: absolute;
+    z-index: 1;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    content: " ";
+}
+
+.bio-pic {
+    position: relative;
+    border: solid 1rem var(--secondary);
+    width: fit-content;
+    display: none;
+}
+
+.bio-pic::before {
+    border: solid 1rem var(--primary);
+    position: absolute;
+    z-index: 1;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    content: " ";
+}
+
+@media (min-width: 1024px) {
+    p {
+        width: 75%;
+    }
+
+    main {
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 100%;
+    }
+
+    .bio-pic {
+        display: block;
+    }
+}

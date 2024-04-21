@@ -1,0 +1,330 @@
+:root {
+    --primary: rgb(23, 23, 23);
+    --secondary: rgb(179,30,60);
+    --terciary: rgb(50, 50, 50);
+    --quaternary: rgb(174, 174, 174);
+    --primary-font: white;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    color: var(--primary-font);
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.primary-button {
+    /* same size as button with border */
+    padding: calc(1rem + 1px);
+    background-color: var(--secondary);
+    border: none;
+}
+
+.secondary-button {
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0);
+    border: solid 1px var(--primary-font);
+}
+
+
+#home {
+    background-color: var(--primary);
+    padding: 2rem 3rem 0 3rem;
+    height: 100svh;
+    min-height: 675px;
+    display: flex;
+    flex-direction: column;
+}
+
+#home-link {
+    border-bottom: solid 1px var(--primary-font);
+    height: fit-content;
+}
+
+#signature {
+    height: 2rem;
+    aspect-ratio: 1/2;
+}
+
+header {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 100%;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 0%;
+    position: relative;
+}
+
+.hero img {
+    height: 225%;
+    position: absolute;
+    bottom: -1rem;
+}
+
+.portrait-container {
+    border: solid var(--secondary) 1rem;
+    max-width: 50svw;
+    width: 30%;
+    max-height: 52%;
+    aspect-ratio: 4/3;
+    display: block;
+    position: absolute;
+    bottom: auto;
+}
+
+@media (min-width: 1250px) {
+    .portrait-container {
+        bottom: 0;
+    }
+}
+
+.empty-block {
+    border: solid var(--quaternary) 8px;
+    position: absolute;
+    height: 25%;
+    /* plus border plus spacing */
+    left: calc(100% + 1rem + 1rem);
+    bottom: 1rem;
+    aspect-ratio: 1/1;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.hero h3 {
+    color: var(--secondary);
+    font-size: smaller;
+}
+
+.hero h1 {
+    font-size: 2rem;
+}
+
+.hero h2 {
+    margin-bottom: 1rem;
+    font-weight: lighter;
+    margin-bottom: 2rem;
+}
+
+.left-panel {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .left-panel {
+        display: block;
+    }
+
+    .hero {
+        grid-template-columns: 50% 50%;
+    }
+
+    .hero h1 {
+        font-size: 4rem;
+    }
+
+    header {
+        flex-direction: row;
+    }
+
+    nav {
+        flex-direction: row;
+    }
+}
+
+.screen-container {
+    padding: 2rem 3rem 0 3rem;
+    height: 100svh;
+    min-height: 675px;
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.screen-container > div img {
+    height: 5rem;
+    width: 5rem;
+    aspect-ratio: 1/1;
+}
+
+.container-text {
+    margin: auto auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.screen-container h1 {
+    font-size: 2rem;
+}
+
+.screen-container h2 {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: lighter;
+    margin-bottom: 2rem;
+}
+
+.screen-container a {
+    width: fit-content;
+}
+
+.img-container {
+    display: none;
+}
+
+#kids-lessons {
+    background-color: var(--terciary);
+}
+
+#kids-photo {
+    background: url('./assets/kids-lessons.png');
+    height: 100%;
+    aspect-ratio: 1/1;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#adult-lessons {
+    background-color: var(--primary);
+}
+
+#adult-photo {
+    background: url('./assets/adult-lessons.png');
+    height: 100%;
+    aspect-ratio: 1/1;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#reviews {
+    padding: 2rem 3rem;
+    min-height: fit-content;
+    height: clamp(fit-content, 50svh, 50svh);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondary);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+#reviews p {
+    width: 100%;
+}
+
+.review {
+    font-weight: bold;
+}
+
+.location {
+    font-weight: lighter;
+    font-size: smaller;
+}
+
+#last-chance {
+    padding: 2rem 3rem;
+    text-align: center;
+    background: url('./assets/piano-closeup.jpg');
+    height: 50svh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+#footer {
+    background-color: var(--secondary);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: space-between;
+    padding: 3rem;
+}
+
+#footer nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.icon-container {
+    display: flex;
+    gap: 1rem;
+}
+
+#facebook-icon {
+    background: url('./assets/facebook.png');
+    background-size: cover;
+    display: block;
+    height: 24px;
+    aspect-ratio: 1/1;
+}
+
+#instagram-icon {
+    background: url('./assets/instagram.png');
+    background-size: cover;
+    display: block;
+    height: 24px;
+    aspect-ratio: 1/1;
+}
+
+#linkedin-icon {
+    background: url('./assets/linkedin.png');
+    background-size: cover;
+    display: block;
+    height: 24px;
+    aspect-ratio: 1/1;
+}
+
+@media (min-width: 1024px) {
+    .img-container {
+        display: block;
+        margin: auto auto;
+        width: 65%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .screen-container {
+        grid-template-columns: 50% 50%;
+    }
+
+    .screen-container h1 {
+        font-size: 3rem;
+    }
+
+    .container-text {
+        width: 65%;
+    }
+
+    #footer {
+        flex-direction: row;
+    }
+
+    #reviews p {
+        width: 100%;
+    }
+}

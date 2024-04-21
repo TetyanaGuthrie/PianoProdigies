@@ -1,0 +1,43 @@
+@import url('../style.css');
+
+body {
+    padding: 2rem 3rem 0 3rem;
+    background-color: var(--primary);
+}
+
+#pricing {
+    border-bottom: solid 1px var(--primary-font);
+    height: fit-content;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+    margin: 4rem auto;
+    background-color: var(--secondary);
+    padding: 2rem;
+    width: 100%;
+    border: solid 1rem var(--quaternary);
+    position: relative;
+}
+
+@media (min-width: 1024px) {
+    p {
+        width: 75%;
+    }
+}
+
+p::before {
+    border: solid 1rem var(--primary);
+    position: absolute;
+    z-index: 1;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    content: " ";
+}

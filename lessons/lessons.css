@@ -1,0 +1,11 @@
+@import url('../style.css');
+
+body {
+    background-color: var(--primary);
+    padding: 2rem 3rem 0 3rem;
+}
+
+#lessons {
+    height: fit-content;
+    border-bottom: solid 1px var(--primary-font);
+}
