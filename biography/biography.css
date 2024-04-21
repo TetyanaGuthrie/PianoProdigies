@@ -68,7 +68,7 @@ img {
     margin: 1rem;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1550px) {
     p {
         width: 75%;
     }
