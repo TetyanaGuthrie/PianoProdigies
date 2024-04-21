@@ -53,14 +53,14 @@ header {
 nav {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 nav a {
     width: fit-content;
     white-space: nowrap;
     height: fit-content;
-    padding: 1rem;
+    padding: 0;
 }
 
 nav a:hover {
@@ -74,9 +74,11 @@ nav a:hover {
 
     nav {
         flex-direction: row;
+        gap: 2rem;
     }
 
     nav a {
         width: 100%;
+        padding: 1rem;
     }
 }
