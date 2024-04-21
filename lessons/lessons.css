@@ -2,10 +2,16 @@
 
 body {
     background-color: var(--primary);
-    padding: 2rem 3rem 0 3rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100svh;
 }
 
 #lessons {
     height: fit-content;
     border-bottom: solid 1px var(--primary-font);
+}
+
+.pad-container {
+    flex: 1 1 0%;
 }

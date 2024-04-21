@@ -1,8 +1,10 @@
 @import url('../style.css');
 
 body {
-    padding: 2rem 3rem 0 3rem;
     background-color: var(--primary);
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
 }
 
 #pricing {
@@ -14,9 +16,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-p {
+    gap: 2rem;
     margin: 4rem auto;
     background-color: var(--secondary);
     padding: 2rem;
@@ -25,13 +25,24 @@ p {
     position: relative;
 }
 
+.pad-container {
+    flex: 1 1 0%;
+    margin-bottom: 5rem;
+}
+
 @media (min-width: 1024px) {
-    p {
-        width: 75%;
+    main {
+        width: 50%;
     }
 }
 
-p::before {
+.secondary-button {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+main::before {
     border: solid 1rem var(--primary);
     position: absolute;
     z-index: 1;
