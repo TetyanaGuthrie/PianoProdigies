@@ -1,69 +1,21 @@
-:root {
-    --primary: rgb(23, 23, 23);
-    --secondary: rgb(179,30,60);
-    --terciary: rgb(50, 50, 50);
-    --quaternary: rgb(174, 174, 174);
-    --primary-font: white;
-}
+@import url('./global.css');
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    color: var(--primary-font);
-    font-family: sans-serif;
-}
-
-a {
-    text-decoration: none;
-}
-
-.primary-button {
-    /* same size as button with border */
-    padding: calc(1rem + 1px);
-    background-color: var(--secondary);
-    border: none;
-}
-
-.secondary-button {
-    padding: 1rem;
-    background-color: rgba(0, 0, 0, 0);
-    border: solid 1px var(--primary-font);
-}
-
-
-#home {
-    background-color: var(--primary);
-    padding: 2rem 3rem 0 3rem;
-    height: 100svh;
-    min-height: 675px;
-    display: flex;
-    flex-direction: column;
-}
 
 #home-link {
     border-bottom: solid 1px var(--primary-font);
     height: fit-content;
 }
 
-#signature {
-    height: 2rem;
-    aspect-ratio: 1/2;
-}
-
-header {
-    display: flex;
-    gap: 1rem;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-nav {
+#home {
+    background-color: var(--primary);
+    padding: 2rem 3rem;
+    height: fit-content;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
 }
 
 .hero {
+    margin-top: 1rem;
     display: grid;
     grid-template-columns: 100%;
     justify-content: center;
@@ -131,6 +83,11 @@ nav {
 }
 
 @media (min-width: 1024px) {
+    #home {
+        padding: 2rem 3rem 0 3rem;
+        height: 100svh;
+    }
+
     .left-panel {
         display: block;
     }
@@ -142,15 +99,8 @@ nav {
     .hero h1 {
         font-size: 4rem;
     }
-
-    header {
-        flex-direction: row;
-    }
-
-    nav {
-        flex-direction: row;
-    }
 }
+
 
 .screen-container {
     padding: 2rem 3rem 0 3rem;
@@ -193,6 +143,7 @@ nav {
     display: none;
 }
 
+
 #kids-lessons {
     background-color: var(--terciary);
 }
@@ -205,6 +156,7 @@ nav {
     background-position: center;
 }
 
+
 #adult-lessons {
     background-color: var(--primary);
 }
@@ -216,6 +168,7 @@ nav {
     background-repeat: no-repeat;
     background-position: center;
 }
+
 
 #reviews {
     padding: 2rem 3rem;
@@ -243,6 +196,7 @@ nav {
     font-size: smaller;
 }
 
+
 #last-chance {
     padding: 2rem 3rem;
     text-align: center;
@@ -255,6 +209,7 @@ nav {
     align-items: center;
     gap: 2rem;
 }
+
 
 #footer {
     background-color: var(--secondary);
@@ -298,6 +253,7 @@ nav {
     height: 24px;
     aspect-ratio: 1/1;
 }
+
 
 @media (min-width: 1024px) {
     .img-container {

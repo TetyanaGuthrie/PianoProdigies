@@ -1,0 +1,82 @@
+:root {
+    --primary: rgb(23, 23, 23);
+    --secondary: rgb(179,30,60);
+    --terciary: rgb(50, 50, 50);
+    --quaternary: rgb(174, 174, 174);
+    --primary-font: white;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    color: var(--primary-font);
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.primary-button {
+    padding: 1rem;
+    background-color: var(--secondary);
+    border: solid 1px var(--secondary);
+}
+
+.primary-button:hover {
+    background-color: transparent;
+}
+
+.secondary-button {
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0);
+    border: solid 1px var(--primary-font);
+}
+
+.secondary-button:hover {
+    background-color: var(--secondary);
+}
+
+
+#signature {
+    height: 2rem;
+    aspect-ratio: 1/2;
+}
+
+header {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+nav a {
+    width: fit-content;
+    white-space: nowrap;
+    height: fit-content;
+    padding: 1rem;
+}
+
+nav a:hover {
+    background-color: var(--secondary);
+}
+
+@media (min-width: 1024px) {
+    header {
+        flex-direction: row;
+    }
+
+    nav {
+        flex-direction: row;
+    }
+
+    nav a {
+        width: 100%;
+    }
+}

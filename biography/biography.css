@@ -37,6 +37,7 @@ p::before {
 }
 
 .bio-pic {
+    margin-top: 1rem;
     position: relative;
     border: solid 1rem var(--secondary);
     width: fit-content;
