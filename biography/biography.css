@@ -84,3 +84,14 @@ img {
         display: block;
     }
 }
+
+@media (min-width: 1024px) {
+    .bio-pic {
+        display: block;
+    }
+
+    main {
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 50%;
+    }
+}
