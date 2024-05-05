@@ -17,10 +17,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function changeNavSig() {
     const signature = document.querySelector('.nav-sig')
+
+    const urlPrefix = signature.classList.contains('index') !== '/'
+        ? '..' 
+        : '.' 
+
     if (window.innerWidth < 1024) {
-        signature.src = '../assets/VerticleSignatures.png'            
+        signature.src = urlPrefix + '/assets/VerticleSignatures.png'            
     } else {
-        signature.src = '../assets/signature.png'
+        signature.src = urlPrefix + '/assets/signature.png'
     }
 }
  
