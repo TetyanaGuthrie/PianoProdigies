@@ -41,17 +41,23 @@ a {
 #signature {
     height: 2rem;
     aspect-ratio: 1/2;
+    margin: auto 0;
 }
 
 header {
     display: flex;
     gap: 1rem;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
+    position: relative;
+}
+
+.signature-container {
+    display: flex;
+    gap: 1rem;
 }
 
 nav {
-    display: flex;
     flex-direction: column;
     gap: 1rem;
 }
@@ -67,22 +73,52 @@ nav a:hover {
     background-color: var(--secondary);
 }
 
+#nav-expand {
+    display: block;
+    height: 2rem;
+    font-size: xx-large;
+    margin: auto 0;
+    background-color: transparent;
+    border: none;
+}
+
+.show {
+    display: flex !important;
+}
+
 .pad-container {
     padding: 2rem 3rem;
 }
 
-@media (min-width: 1024px) {
-    header {
-        flex-direction: row;
-    }
+.top-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    z-index: 10;
+    padding: 1rem;
+    background-color: var(--secondary);
+}
 
+@media (min-width: 1024px) {
     nav {
+        display: flex;
         flex-direction: row;
         gap: 2rem;
+        transform: none;
+        position: relative;
+        top: 0;
+        background-color: transparent;
+        padding: 0;
+        width: fit-content;
     }
 
     nav a {
         width: 100%;
         padding: 1rem;
+    }
+
+    #nav-expand {
+        display: none;
     }
 }
