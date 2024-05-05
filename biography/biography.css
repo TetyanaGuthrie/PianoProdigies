@@ -70,7 +70,6 @@ p::before {
 }
 
 .bio-pic img {
-    margin: 1rem;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
