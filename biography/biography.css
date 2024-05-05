@@ -14,15 +14,16 @@ body {
 
 main {
     display: flex;
-    gap: 3rem;
+    gap: 1rem;
     align-items: center;
     padding: 0;
+    flex-direction: column;
     margin: auto;
     width: 100%;
 }
 
 p {
-    margin: 4rem auto;
+    margin: 0 auto;
     background-color: var(--secondary);
     padding: 2rem;
     width: 100%;
@@ -46,7 +47,11 @@ p::before {
     position: relative;
     border: solid 1rem var(--secondary);
     width: fit-content;
-    display: none;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 .bio-pic::before {
@@ -66,6 +71,9 @@ p::before {
 
 img {
     margin: 1rem;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 @media (min-width: 1550px) {
@@ -91,7 +99,10 @@ img {
     }
 
     main {
-        grid-template-columns: 100%;
-        grid-template-rows: 50% 50%;
+        flex-direction: row;
+    }
+
+    p {
+        margin: 4rem auto;
     }
 }
