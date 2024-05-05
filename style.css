@@ -82,6 +82,12 @@
     display: none;
 }
 
+.buttons-container {
+    display: flex;
+    gap: 1rem;
+    margin: 0 auto;
+}
+
 @media (min-width: 1024px) {
     #home {
         padding: 2rem 3rem 0 3rem;
