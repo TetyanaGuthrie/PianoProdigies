@@ -17,13 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function changeNavSig() {
     const signature = document.querySelector('.nav-sig')
-    console.debug(window.location.pathname)
-    const urlPrefix = window.location.pathname !== '/'
-        ? '..' 
-        : '.' 
     if (window.innerWidth < 1024) {
-        signature.src = urlPrefix + '/assets/VerticleSignatures.png'            
+        signature.src = '../assets/VerticleSignatures.png'            
     } else {
-        signature.src = urlPrefix + '/assets/signature.png'
+        signature.src = '../assets/signature.png'
     }
 }
