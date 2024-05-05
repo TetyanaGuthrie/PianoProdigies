@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function changeNavSig() {
     const signature = document.querySelector('.nav-sig')
 
-    const urlPrefix = signature.classList.contains('index') !== '/'
+    const urlPrefix = signature.classList.contains('index')
         ? '..' 
         : '.' 
 
