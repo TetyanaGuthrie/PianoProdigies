@@ -44,7 +44,7 @@ a {
 
 #signature {
     height: 2rem;
-    aspect-ratio: 1/2;
+    width: 20rem;
     margin: auto 0;
 }
 
@@ -59,6 +59,7 @@ header {
 .signature-container {
     display: flex;
     gap: 1rem;
+    width: fit-content;
 }
 
 nav {
@@ -91,7 +92,7 @@ nav a:hover {
 }
 
 .pad-container {
-    padding: 2rem 3rem;
+    padding: 2rem 1rem;
 }
 
 .top-nav {
@@ -133,5 +134,9 @@ nav a:hover {
 
     #nav-expand {
         display: none;
+    }
+
+    .pad-container {
+        padding: 2rem 3rem;
     }
 }
