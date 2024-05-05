@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function changeNavSig() {
     const signature = document.querySelector('.nav-sig')
+    console.debug(window.location.pathname)
     const urlPrefix = window.location.pathname !== '/'
         ? '..' 
         : '.' 
