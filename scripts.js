@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+    changeNavSig()
+
     const navExpand = document.getElementById('nav-expand')
 
     navExpand.addEventListener('click', () => {
@@ -8,11 +10,19 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     
 
-    // window.addEventListener('resize', (e) => {
-    //     if (window.innerWidth < 1024) return 
-    //     const nav = document.querySelector('nav')
-    
-    //     nav.classList.remove('hide')
-    // })
+    window.addEventListener('resize', (e) => {
+        changeNavSig()
+    })
 })
 
+function changeNavSig() {
+    const signature = document.querySelector('.nav-sig')
+    const urlPrefix = window.location.pathname !== '/'
+        ? '..' 
+        : '.' 
+    if (window.innerWidth < 1024) {
+        signature.src = urlPrefix + '/assets/VerticleSignatures.png'            
+    } else {
+        signature.src = urlPrefix + '/assets/signature.png'
+    }
+}
